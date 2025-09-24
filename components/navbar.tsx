@@ -40,9 +40,9 @@ export default function Navbar() {
   }, [navItems]);
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-      <div className="bg-black/80 backdrop-blur-md rounded-full border border-gray-700 px-6 py-3 shadow-2xl">
-        <div className="flex items-center space-x-8">
+    <nav className="fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] md:w-auto">
+      <div className="bg-black/80 backdrop-blur-md rounded-full border border-gray-700 px-3 md:px-6 py-2 md:py-3 shadow-2xl">
+        <div className="flex items-center justify-between md:space-x-8">
           <button
             onClick={() => scrollToSection("hero")}
             className="text-xl font-extrabold text-white hover:text-gray-300 transition-colors tracking-tight"

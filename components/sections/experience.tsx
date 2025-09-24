@@ -15,60 +15,43 @@ export default function Experience() {
   const workExperiences: WorkExperience[] = [
     {
       id: "engineering-intern",
-      title: "Mechanical Engineering Intern",
-      organization: "Tech Solutions Inc.",
-      location: "San Francisco, CA",
-      period: "June 2024 - August 2024",
+      title: "Board Executive",
+      organization: "Western Mechatronics",
+      location: "Calgary, AB",
+      period: "August 2021 – Present",
       description: [
-        "Assisted in the design and development of mechanical components for automated manufacturing systems",
-        "Conducted stress analysis and thermal simulations using ANSYS and SolidWorks Simulation",
-        "Collaborated with cross-functional teams to optimize product designs and reduce manufacturing costs by 15%",
-        "Created technical documentation and engineering drawings for production teams"
+        "Co-Leader of a globally recognized robotics education company with $240,000 ARR, 156 members and a 7,000+ sqft workshop dedicated to creating robotics and leadership opportunities for students",
+        "Secured partnerships with Google, TC Energy, Telus and Garmin to host classes and events for underrepresented groups in robotics, leading to a 250% increase in Alberta Robotics Participation since 2019",
+        "Organized 8 annual outreach programs with 1000+ attendees, hosting workshops at The Telus Spark Sciences Center, various schools and festivals in Alberta",
+        "Led Calgary Stampede’s first robotics booth, engaging and promoting STEM to 3 million+ visitors through two weeks, participants building 3100+ robots"
       ],
-      technologies: ["SolidWorks", "ANSYS", "AutoCAD", "MATLAB", "3D Printing"]
+      technologies: []
     },
     {
       id: "design-assistant",
-      title: "CAD Design Assistant",
-      organization: "Innovative Design Studio",
-      location: "Austin, TX",
-      period: "January 2024 - May 2024",
+      title: "Robotics Teacher",
+      organization: "NEXT Robotics",
+      location: "Calgary, AB",
+      period: "June 2021 – April 2024",
       description: [
-        "Developed 3D models and technical drawings for various mechanical components and assemblies",
-        "Performed design validation through finite element analysis and prototype testing",
-        "Streamlined the design process by creating standardized templates and part libraries",
-        "Supported senior engineers in project planning and design reviews"
+        "Designed and built multiple STEM based curriculums taught to students ranging from Grades 2 – 12, focusing on engineering principles and coding basics",
+        "Facilitated full-time summer camps and year-round classes, allowing students to explore robotics and prepare for competitive teams, impacting 350+ students in total",
       ],
-      technologies: ["SolidWorks", "Fusion 360", "KeyShot", "GD&T"]
+      technologies: []
     },
     {
       id: "research-assistant",
-      title: "Research Assistant",
-      organization: "University Engineering Lab",
-      location: "College Station, TX",
-      period: "September 2023 - December 2023",
+      title: "Event Co-Lead",
+      organization: "Google Girl Powered",
+      location: "Calgary, AB",
+      period: "May 2023 – Present",
       description: [
-        "Conducted research on sustainable materials for automotive applications under faculty supervision",
-        "Designed and executed experimental procedures to test material properties and performance",
-        "Analyzed data using statistical methods and presented findings to research team",
-        "Co-authored research paper on composite materials published in undergraduate engineering journal"
+        "Co-led Canada’s first Girl Powered Robotics Workshop alongside Google and University of Calgary, providing girls in middle and high school the opportunity to engage with STEM regardless of their circumstances",
+        "Created curriculums, contacted robotics experienced presenters, and contacted guest speakers with experiences and inspirations to share",
+        "Designed custom blueprints each year for 250+ students, helping construct, code and operate the robots to participate in friendly competitions",
       ],
       technologies: ["MATLAB", "LabVIEW", "Data Analysis", "Technical Writing"]
     },
-    {
-      id: "workshop-technician",
-      title: "Workshop Technician",
-      organization: "MakerSpace Community Lab",
-      location: "Houston, TX",
-      period: "June 2023 - August 2023",
-      description: [
-        "Operated and maintained various manufacturing equipment including CNC machines and 3D printers",
-        "Assisted community members with project design and manufacturing process optimization",
-        "Implemented safety protocols and conducted equipment training sessions for new users",
-        "Troubleshot mechanical issues and performed preventive maintenance on workshop tools"
-      ],
-      technologies: ["CNC Machining", "3D Printing", "Laser Cutting", "Hand Tools", "Safety Protocols"]
-    }
   ];
 
   return (
@@ -128,8 +111,8 @@ export default function Experience() {
                       ))}
                     </ul>
 
-                    {experience.technologies && (
-                      <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-gray-800">
+                    {/* {experience.technologies && (
+                      <div className="flex flex-wrap gap-1.5 mt-3 pt-3">
                         {experience.technologies.map((tech) => (
                           <Badge
                             key={tech}
@@ -140,7 +123,7 @@ export default function Experience() {
                           </Badge>
                         ))}
                       </div>
-                    )}
+                    )} */}
                   </div>
                 </div>
               </div>

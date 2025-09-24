@@ -12,12 +12,12 @@ export default function About() {
 
         <div className="-space-y-5">
           {/* First combo - Image left-center, text box right-center, overlapping */}
-          <div className="relative flex justify-center items-center min-h-[200px]">
-            <div className="relative flex items-center justify-center w-full max-w-5xl">
+          <div className="relative flex flex-col md:flex-row justify-center items-center min-h-[200px]">
+            <div className="relative flex flex-col md:flex-row items-center justify-center w-full max-w-5xl">
               {/* Image Container - Positioned left of center, offset upward */}
-              <div className="relative w-[550px] lg:w-[700px] h-80 lg:h-[400px] rounded-2xl overflow-hidden shadow-2xl -mr-12 lg:-mr-16 z-0 -mt-8 lg:-mt-12">
+              <div className="relative w-80 md:w-[450px] lg:w-[700px] h-64 md:h-80 lg:h-[400px] overflow-hidden shadow-2xl md:-mr-12 lg:-mr-16 z-0 md:-mt-8 lg:-mt-12 mb-8 md:mb-0">
                 <Image
-                  src="/210Z.jpg"
+                  src="/k_about1.JPG"
                   alt="Kartik"
                   fill
                   className="object-cover"
@@ -29,15 +29,15 @@ export default function About() {
               </div>
 
               {/* Background Text Box - Positioned right of center, wider */}
-              <div className="relative w-[450px] lg:w-[900px] z-10 mt-8 lg:mt-60">
-                <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 shadow-2xl min-h-[280px]">
+              <div className="relative w-80 md:w-[400px] lg:w-[900px] z-10 md:mt-8 lg:mt-60 mb-8 md:mb-0">
+                <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 p-4 md:p-8 shadow-2xl min-h-[200px] md:min-h-[280px]">
                   <h3 className="text-2xl font-bold text-white mb-6">Background</h3>
                   <div className="space-y-2 text-gray-300 text-base">
                     <p className="leading-loose">
-                      Currently pursuing a Bachelor&apos;s degree in Mechanical Engineering with a focus on understanding fundamental engineering principles, design methodologies, and problem-solving approaches.
+                      Hi! I'm Kartik, and I am currently pursuing a Bachelor&apos;s degree in Systems Design Engineering at the University of Waterloo. I have a strong passion for robotics, design, and software development.
                     </p>
                     <p className="leading-loose">
-                      Eager to gain hands-on experience in the field through internships and practical applications of classroom knowledge.
+                      I have 4+ years experience in robotics and CAD, and I also have experience in software development, particularly in web development and Python programming. I love working on projects that challenge me to learn new skills and push the boundaries of what I can create.
                     </p>
                   </div>
                 </div>
@@ -46,11 +46,11 @@ export default function About() {
           </div>
 
           {/* Second combo - Text box left-center, image right-center, overlapping */}
-          <div className="relative flex justify-center items-center min-h-[200px]">
-            <div className="relative flex items-center justify-center w-full max-w-5xl">
+          <div className="relative flex flex-col md:flex-row justify-center items-center min-h-[200px]">
+            <div className="relative flex flex-col md:flex-row items-center justify-center w-full max-w-5xl">
               {/* Passion & Vision Text Box - Positioned left of center, wider */}
-              <div className="relative w-[450px] lg:w-[750px] z-10 -mr-12 lg:-mr-16 -mt-16 lg:mt-55">
-                <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 shadow-2xl min-h-[280px]">
+              <div className="relative w-80 md:w-[400px] lg:w-[750px] z-10 md:-mr-12 lg:-mr-16 md:-mt-16 lg:mt-55 mb-8 md:mb-0 order-2 md:order-1">
+                <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 p-4 md:p-8 shadow-2xl min-h-[200px] md:min-h-[280px]">
                   <h3 className="text-2xl font-bold text-white mb-6">Passion & Vision</h3>
                   <div className="space-y-2 text-gray-300 text-base">
                     <p className="leading-loose">
@@ -63,14 +63,14 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="relative w-[550px] lg:w-[700px] h-80 lg:h-[400px] rounded-2xl overflow-hidden shadow-2xl z-0 mt-8 lg:mt-12">
+              <div className="relative w-80 md:w-[450px] lg:w-[700px] h-64 md:h-80 lg:h-[400px] overflow-hidden shadow-2xl z-0 md:mt-8 lg:mt-12 order-1 md:order-2 mb-8 md:mb-0">
                 <Image
-                  src="/210Z.jpg"
+                  src="/k_about2.jpg"
                   alt="Kartik"
                   fill
                   className="object-cover"
                   quality={100}
-                  sizes="(max-width: 768px) 320px, 384px"
+                  sizes="(max-width: 768px) 320px, (max-width: 1024px) 450px, 700px"
                 />
                 {/* Subtle overlay for better text contrast */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

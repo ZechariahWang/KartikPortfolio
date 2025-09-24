@@ -14,7 +14,7 @@ export default function Hero() {
     <section className="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/210Z.jpg"
+        src="/k_BackgroundImage.png"
         alt="Background"
         fill
         className="object-cover z-0"
@@ -24,19 +24,17 @@ export default function Hero() {
       />
 
       {/* Dark Opacity Layer */}
-      <div className="absolute inset-0 z-10 bg-black/60" />
+      <div className="absolute inset-0 z-10 bg-black/80" />
 
       {/* Content */}
       <div className="relative z-20 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-          Hi, I&apos;m Kartik
+        <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Hi, I&apos;m </span>
+          <span className="bg-gradient-to-r from-[#ff34a1] to-[#00ffc3] bg-clip-text text-transparent">Kartik</span>
         </h1>
-        <h2 className="text-xl md:text-2xl text-gray-300 mb-4">
+        <h2 className="text-xl md:text-2xl text-gray-300 mb-8">
           System Design @ Waterloo
         </h2>
-        <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-          First-year systems design engineering student. Experience in robotics, design, and software development
-        </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <Button
