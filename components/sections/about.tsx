@@ -34,7 +34,7 @@ export default function About() {
                   <h3 className="text-2xl font-bold text-white mb-6">Background</h3>
                   <div className="space-y-2 text-gray-300 text-base">
                     <p className="leading-loose">
-                      Hi! I'm Kartik, and I am currently pursuing a Bachelor&apos;s degree in Systems Design Engineering at the University of Waterloo. I have a strong passion for robotics, design, and software development.
+                      Hi! I&apos;m Kartik, and I am currently pursuing a Bachelor&apos;s degree in Systems Design Engineering at the University of Waterloo. I have a strong passion for robotics, design, and software development.
                     </p>
                     <p className="leading-loose">
                       I have 4+ years experience in robotics and CAD, and I also have experience in software development, particularly in web development and Python programming. I love working on projects that challenge me to learn new skills and push the boundaries of what I can create.

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -8,12 +8,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const navItems = [
+  const navItems = useMemo(() => [
     { id: "hero", label: "Home" },
     { id: "about", label: "About" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" }
-  ];
+  ], []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
