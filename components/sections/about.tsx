@@ -17,7 +17,7 @@ export default function About() {
               {/* Image Container - Positioned left of center, offset upward */}
               <div className="relative w-80 md:w-[450px] lg:w-[700px] h-64 md:h-80 lg:h-[400px] overflow-hidden shadow-2xl md:-mr-12 lg:-mr-16 z-0 md:-mt-8 lg:-mt-12 mb-8 md:mb-0">
                 <Image
-                  src="/k_about1.JPG"
+                  src="/k_about3.jpg"
                   alt="Kartik"
                   fill
                   className="object-cover"

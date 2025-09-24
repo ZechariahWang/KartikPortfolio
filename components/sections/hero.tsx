@@ -44,18 +44,19 @@ export default function Hero() {
           >
             View My Work
           </Button>
-          <Button
+          {/* <Button
             size="lg"
             variant="outline"
             className="border-gray-600 text-gray-300 hover:bg-gray-800"
           >
             <Download className="mr-2 h-4 w-4" />
             Resume
-          </Button>
+          </Button> */}
           <Button
             size="lg"
             variant="outline"
             className="border-gray-600 text-gray-300 hover:bg-gray-800"
+            onClick={() => { window.location.href = 'mailto:kramacha@uwaterloo.ca'; }}
           >
             <Mail className="mr-2 h-4 w-4" />
             Contact

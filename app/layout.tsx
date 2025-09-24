@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kartik Portfolio | Mechanical Engineering Student",
-  description: "Portfolio of a first-year mechanical engineering student seeking internship opportunities in innovation and problem-solving.",
+  title: "Kartik Portfolio | System Design @ Waterloo",
+  description: "Showcase of experience, projects, and comunity.",
 };
 
 export default function RootLayout({
