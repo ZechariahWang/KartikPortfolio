@@ -85,7 +85,7 @@ export default function Experience() {
           <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400/60 via-purple-400/60 to-transparent"></div>
 
           <div className="space-y-6">
-            {workExperiences.map((experience, index) => (
+            {workExperiences.map((experience) => (
               <div key={experience.id} className="relative flex items-start gap-6">
                 {/* Timeline Dot */}
                 <div className="relative z-10 flex-shrink-0">

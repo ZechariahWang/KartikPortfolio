@@ -37,7 +37,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navItems]);
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">

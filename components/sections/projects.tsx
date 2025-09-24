@@ -154,7 +154,7 @@ export default function Projects() {
 
         {/* VSCO-style Masonry Grid */}
         <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
               key={project.id}
               className="break-inside-avoid mb-4"

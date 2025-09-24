@@ -34,7 +34,7 @@ export default function About() {
                   <h3 className="text-2xl font-bold text-white mb-6">Background</h3>
                   <div className="space-y-2 text-gray-300 text-base">
                     <p className="leading-loose">
-                      Currently pursuing a Bachelor's degree in Mechanical Engineering with a focus on understanding fundamental engineering principles, design methodologies, and problem-solving approaches.
+                      Currently pursuing a Bachelor&apos;s degree in Mechanical Engineering with a focus on understanding fundamental engineering principles, design methodologies, and problem-solving approaches.
                     </p>
                     <p className="leading-loose">
                       Eager to gain hands-on experience in the field through internships and practical applications of classroom knowledge.
@@ -57,7 +57,7 @@ export default function About() {
                       My interests span across mechanical design, manufacturing processes, and sustainable engineering practices. I believe in the power of engineering to create positive change in the world.
                     </p>
                     <p className="leading-loose">
-                      Always looking for opportunities to collaborate on innovative projects and contribute to meaningful solutions that can make a difference in people's lives.
+                      Always looking for opportunities to collaborate on innovative projects and contribute to meaningful solutions that can make a difference in people&apos;s lives.
                     </p>
                   </div>
                 </div>

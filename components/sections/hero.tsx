@@ -29,7 +29,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-20 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-          Hi, I'm Kartik
+          Hi, I&apos;m Kartik
         </h1>
         <h2 className="text-xl md:text-2xl text-gray-300 mb-4">
           System Design @ Waterloo
