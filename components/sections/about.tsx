@@ -51,7 +51,7 @@ export default function About() {
               {/* Passion & Vision Text Box - Positioned left of center, wider */}
               <div className="relative w-80 md:w-[400px] lg:w-[750px] z-10 md:-mr-12 lg:-mr-16 md:-mt-16 lg:mt-55 mb-8 md:mb-0 order-2 md:order-1">
                 <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 p-4 md:p-8 shadow-2xl min-h-[200px] md:min-h-[280px]">
-                  <h3 className="text-2xl font-bold text-white mb-6">Currently Working On: Canada's largest Robotics Tournament</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">Currently Working On: Canada&apos;s largest Robotics Tournament</h3>
                   <div className="space-y-2 text-gray-300 text-base">
                     <p className="leading-loose">
                       I&apos;m currently working on Mecha Mayhem, Canada&apos;s largest high school robotics competition, as the Head of Software. In this role, I lead a team of 20+ students to develop the software systems for the competition&apos;s robots, including autonomous navigation, sensor integration, and control algorithms.
