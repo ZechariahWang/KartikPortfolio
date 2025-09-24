@@ -51,29 +51,27 @@ export default function About() {
               {/* Passion & Vision Text Box - Positioned left of center, wider */}
               <div className="relative w-80 md:w-[400px] lg:w-[750px] z-10 md:-mr-12 lg:-mr-16 md:-mt-16 lg:mt-55 mb-8 md:mb-0 order-2 md:order-1">
                 <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 p-4 md:p-8 shadow-2xl min-h-[200px] md:min-h-[280px]">
-                  <h3 className="text-2xl font-bold text-white mb-6">Passion & Vision</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">Currently Working On: Canada's largest Robotics Tournament</h3>
                   <div className="space-y-2 text-gray-300 text-base">
                     <p className="leading-loose">
-                      My interests span across mechanical design, manufacturing processes, and sustainable engineering practices. I believe in the power of engineering to create positive change in the world.
+                      I&apos;m currently working on Mecha Mayhem, Canada&apos;s largest high school robotics competition, as the Head of Software. In this role, I lead a team of 20+ students to develop the software systems for the competition&apos;s robots, including autonomous navigation, sensor integration, and control algorithms.
                     </p>
                     <p className="leading-loose">
-                      Always looking for opportunities to collaborate on innovative projects and contribute to meaningful solutions that can make a difference in people&apos;s lives.
+                      Working with cutting-edge technologies including embedded systems, sensor integration, and machine learning algorithms to create interactive learning experiences for students.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="relative w-80 md:w-[450px] lg:w-[700px] h-64 md:h-80 lg:h-[400px] overflow-hidden shadow-2xl z-0 md:mt-8 lg:mt-12 order-1 md:order-2 mb-8 md:mb-0">
-                <Image
-                  src="/k_about2.jpg"
-                  alt="Kartik"
-                  fill
-                  className="object-cover"
-                  quality={100}
-                  sizes="(max-width: 768px) 320px, (max-width: 1024px) 450px, 700px"
+              <div className="relative w-80 md:w-[450px] lg:w-[700px] h-64 md:h-80 lg:h-[400px] rounded-2xl overflow-hidden shadow-2xl z-0 md:mt-8 lg:mt-12 order-1 md:order-2 mb-8 md:mb-0">
+                <iframe
+                  src="https://www.youtube.com/embed/e-PBs0b2zsc?start=6"
+                  title="Current Project Demo"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
-                {/* Subtle overlay for better text contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               </div>
             </div>
           </div>
