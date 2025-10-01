@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, X, Github } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Project {
@@ -35,7 +35,7 @@ export default function Projects() {
       fullDescription: "Developed a functional prototype for a mechanical housing component using 3D printing technology. This project demonstrated rapid prototyping capabilities and iterative design improvements.",
       image: "/kartikpresent.png",
       category: "community",
-      aspect: "portrait",
+      aspect: "landscape",
       technologies: ["Fusion 360", "3D Printing", "PLA/ABS", "Post-processing"],
       challenges: ["Print orientation optimization", "Support structure design", "Surface finish requirements"],
       outcomes: ["Functional prototype achieved", "3 design iterations completed", "Ready for production scaling"]
@@ -95,7 +95,7 @@ export default function Projects() {
       fullDescription: "Designed and executed experimental procedures to characterize the mechanical properties of carbon fiber composites for aerospace applications.",
       image: "/replacement210Z.jpg",
       category: "community",
-      aspect: "portrait",
+      aspect: "landscape",
       technologies: ["LabVIEW", "Instron Testing", "Data Analysis", "Statistical Methods"],
       challenges: ["Sample preparation", "Test standardization", "Data interpretation"],
       outcomes: ["Material properties database", "Testing protocol established", "Research publication submitted"]
@@ -150,6 +150,14 @@ export default function Projects() {
     },
   ];
 
+  // Preload all images on component mount
+  useEffect(() => {
+    projects.forEach((project) => {
+      const img = new window.Image();
+      img.src = project.image;
+    });
+  }, []);
+
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'mechanical': return 'bg-blue-500/20 text-blue-300';
@@ -172,9 +180,15 @@ export default function Projects() {
     <section id="projects" className="py-20 px-4 bg-gray-950">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold mb-4 text-white"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+          >
             Project Gallery
-          </h2>
+          </motion.h2>
         </div>
 
         {/* VSCO-style Masonry Grid */}
@@ -195,7 +209,7 @@ export default function Projects() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover object-[center_30%] scale-105 group-hover:scale-110 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
 

@@ -1,5 +1,8 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Briefcase } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface WorkExperience {
   id: string;
@@ -58,9 +61,15 @@ export default function Experience() {
     <section id="experience" className="py-20 px-4 bg-gray-950">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold mb-6 text-white"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+          >
             Work Experience
-          </h2>
+          </motion.h2>
         </div>
 
         <div className="relative">

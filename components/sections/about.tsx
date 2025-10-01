@@ -1,13 +1,22 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <section id="about" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold mb-6 text-white"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+          >
             About Me
-          </h2>
+          </motion.h2>
         </div>
 
         <div className="-space-y-5">
@@ -29,8 +38,8 @@ export default function About() {
               </div>
 
               {/* Background Text Box - Positioned right of center, wider */}
-              <div className="relative w-80 md:w-[400px] lg:w-[900px] z-10 md:mt-8 lg:mt-60 mb-8 md:mb-0">
-                <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 p-4 md:p-8 shadow-2xl min-h-[200px] md:min-h-[280px]">
+              <div className="relative w-80 md:w-[500px] lg:w-[1000px] z-10 md:mt-8 lg:mt-60 mb-8 md:mb-0">
+                <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 p-4 md:p-6 lg:p-8 shadow-2xl">
                   <h3 className="text-2xl font-bold text-white mb-6">Background</h3>
                   <div className="space-y-4 text-gray-300 text-base">
                     <p className="leading-relaxed">
@@ -49,8 +58,8 @@ export default function About() {
           <div className="relative flex flex-col md:flex-row justify-center items-center min-h-[200px]">
             <div className="relative flex flex-col md:flex-row items-center justify-center w-full max-w-5xl">
               {/* Passion & Vision Text Box - Positioned left of center, wider */}
-              <div className="relative w-80 md:w-[400px] lg:w-[750px] z-0 md:-mr-12 lg:-mr-16 md:-mt-16 lg:mt-55 mb-8 md:mb-0 order-2 md:order-1">
-                <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 p-4 md:p-8 shadow-2xl min-h-[200px] md:min-h-[280px]">
+              <div className="relative w-80 md:w-[500px] lg:w-[850px] z-0 md:-mr-12 lg:-mr-16 md:-mt-16 lg:mt-55 mb-8 md:mb-0 order-2 md:order-1">
+                <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 p-4 md:p-6 lg:p-8 shadow-2xl">
                   <h3 className="text-2xl font-bold text-white mb-6">Currently Working On: Canada&apos;s largest Robotics Tournament</h3>
                   <div className="space-y-4 text-gray-300 text-base">
                     <p className="leading-relaxed">

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Download, Mail } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -28,13 +29,23 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-20 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">
+        <motion.h1
+          className="text-5xl md:text-7xl font-bold mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Hi, I&apos;m </span>
           <span className="bg-gradient-to-r from-[#ff34a1] to-[#00ffc3] bg-clip-text text-transparent">Kartik</span>
-        </h1>
-        <h2 className="text-xl md:text-2xl text-gray-300 mb-8">
+        </motion.h1>
+        <motion.h2
+          className="text-xl md:text-2xl text-gray-300 mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           System Design @ Waterloo
-        </h2>
+        </motion.h2>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <Button
