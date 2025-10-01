@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, X, Github } from "lucide-react";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Project {
   id: string;
@@ -28,23 +29,11 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
-      id: "cad-model-showcase",
-      title: "Art 1",
-      description: "CAD modeling of complex gear mechanisms with stress analysis visualization",
-      fullDescription: "This project involved creating a detailed CAD model of a precision gear assembly for a mechanical transmission system. The focus was on understanding gear ratios, load distribution, and material stress points under various operating conditions.",
-      image: "/k_design1.jpg",
-      category: "mechanical",
-      aspect: "square",
-      technologies: ["SolidWorks", "ANSYS", "GD&T", "Material Selection"],
-      challenges: ["Complex geometry modeling", "Stress concentration analysis", "Manufacturing feasibility"],
-      outcomes: ["15% weight reduction", "Improved stress distribution", "Manufacturing cost reduction"]
-    },
-    {
       id: "prototype-build",
       title: "3D Printed Prototype",
       description: "From concept to reality - mechanical housing prototype iteration",
       fullDescription: "Developed a functional prototype for a mechanical housing component using 3D printing technology. This project demonstrated rapid prototyping capabilities and iterative design improvements.",
-      image: "/k_mech1.jpg",
+      image: "/kartikpresent.png",
       category: "community",
       aspect: "portrait",
       technologies: ["Fusion 360", "3D Printing", "PLA/ABS", "Post-processing"],
@@ -56,7 +45,7 @@ export default function Projects() {
       title: "Heat Transfer Simulation",
       description: "Thermal analysis results showing temperature distribution patterns",
       fullDescription: "Conducted comprehensive thermal analysis on a heat exchanger design to optimize heat transfer efficiency and identify potential hotspots that could affect performance.",
-      image: "/k_mech2.png",
+      image: "/kartikfam.jpg",
       category: "community",
       aspect: "landscape",
       technologies: ["ANSYS Fluent", "MATLAB", "Thermal Modeling", "CFD Analysis"],
@@ -88,11 +77,23 @@ export default function Projects() {
       outcomes: ["40% weight reduction", "Competition requirements met", "Successful field testing"]
     },
     {
+      id: "cad-model-showcase",
+      title: "Art 1",
+      description: "CAD modeling of complex gear mechanisms with stress analysis visualization",
+      fullDescription: "This project involved creating a detailed CAD model of a precision gear assembly for a mechanical transmission system. The focus was on understanding gear ratios, load distribution, and material stress points under various operating conditions.",
+      image: "/battleofab2.jpg",
+      category: "mechanical",
+      aspect: "square",
+      technologies: ["SolidWorks", "ANSYS", "GD&T", "Material Selection"],
+      challenges: ["Complex geometry modeling", "Stress concentration analysis", "Manufacturing feasibility"],
+      outcomes: ["15% weight reduction", "Improved stress distribution", "Manufacturing cost reduction"]
+    },
+    {
       id: "material-testing",
       title: "Composite Material Tests",
       description: "Experimental setup for testing carbon fiber composite properties",
       fullDescription: "Designed and executed experimental procedures to characterize the mechanical properties of carbon fiber composites for aerospace applications.",
-      image: "/k_mech4.png",
+      image: "/replacement210Z.jpg",
       category: "community",
       aspect: "portrait",
       technologies: ["LabVIEW", "Instron Testing", "Data Analysis", "Statistical Methods"],
@@ -177,11 +178,15 @@ export default function Projects() {
         </div>
 
         {/* VSCO-style Masonry Grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
-          {projects.map((project) => (
-            <div
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+          {projects.map((project, index) => (
+            <motion.div
               key={project.id}
               className="break-inside-avoid mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.2, delay: index * 0.05 }}
             >
               <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300">
                 {/* Image */}
@@ -226,16 +231,31 @@ export default function Projects() {
 
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
       </div>
 
       {/* Project Modal */}
-      {selectedProject && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-gray-900 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide">
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.1 }}
+            onClick={() => setSelectedProject(null)}
+          >
+            <motion.div
+              className="bg-gray-900 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide"
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "100%", opacity: 0 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25, duration: 2 }}
+              onClick={(e) => e.stopPropagation()}
+            >
             {/* Modal Header */}
             <div className="relative">
               <div className="relative aspect-[16/9] overflow-hidden rounded-t-3xl">
@@ -243,7 +263,7 @@ export default function Projects() {
                   src={selectedProject.image}
                   alt={selectedProject.title}
                   fill
-                  className="object-cover"
+                  className="object-cover object-[center_10%]"
                   sizes="(max-width: 1200px) 100vw, 1200px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -362,9 +382,10 @@ export default function Projects() {
                 </div>
               )}
             </div>
-          </div>
-        </div>
-      )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
