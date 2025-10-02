@@ -49,7 +49,7 @@ export default function About() {
                       With over 4 years of hands-on experience in robotics and CAD, I specialize in mechanical design, prototyping, and hardware integration. I thrive on tackling challenging projects that push the boundaries of what&apos;s possible.
                     </p>
                       <p className="leading-relaxed">
-                      In my spare time, I'm giving back to my community, through STEM workshops, summer camps, and coaching initatives at Canada's leading robotics club.
+                      In my spare time, I&apos;m giving back to my community, through STEM workshops, summer camps, and coaching initatives at Canada&apos;s leading robotics club.
                     </p>
                   </div>
                 </div>
