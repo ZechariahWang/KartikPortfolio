@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Download, Mail } from "lucide-react";
+import { ChevronDown, Linkedin, Download, Mail, Github } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -44,34 +44,57 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          System Design @ Waterloo
+          Systems Design Engineering @ UWaterloo
         </motion.h2>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <Button
-            size="lg"
-            className="bg-white text-black hover:bg-gray-200 transition-colors"
-            onClick={() => scrollToSection("projects")}
-          >
-            View My Work
-          </Button>
-          {/* <Button
-            size="lg"
-            variant="outline"
-            className="border-gray-600 text-gray-300 hover:bg-gray-800"
-          >
-            <Download className="mr-2 h-4 w-4" />
-            Resume
-          </Button> */}
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-gray-600 text-gray-300 hover:bg-gray-800"
-            onClick={() => { window.location.href = 'mailto:kramacha@uwaterloo.ca'; }}
-          >
-            <Mail className="mr-2 h-4 w-4" />
-            Contact
-          </Button>
+        <div className="flex flex-col gap-4 items-center mb-16">
+          {/* Top row - Text buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              size="lg"
+              className="bg-white text-black hover:bg-gray-200 transition-colors"
+              onClick={() => scrollToSection("projects")}
+            >
+              View My Work
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-gray-600 text-gray-300 hover:bg-gray-800"
+              onClick={() => { window.location.href = 'https://drive.google.com/file/d/1RYB01jL6YUF5eNr18eLt2bip9FLhkDiH/view?usp=sharing'; }}
+            >
+              
+              Resume
+            </Button>
+          </div>
+
+          {/* Bottom row - Icon buttons */}
+          <div className="flex gap-4">
+            <Button
+              size="icon"
+              className="w-10 h-10 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800"
+              variant="outline"
+              onClick={() => { window.location.href = 'mailto:kramacha@uwaterloo.ca'; }}
+            >
+              <Mail className="h-5 w-5" />
+            </Button>
+            <Button
+              size="icon"
+              className="w-10 h-10 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800"
+              variant="outline"
+              onClick={() => window.open('https://www.linkedin.com/in/kartik-ramachandran-b25aa8290/', '_blank')}
+            >
+              <Linkedin className="h-5 w-5" />
+            </Button>
+            <Button
+              size="icon"
+              className="w-10 h-10 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800"
+              variant="outline"
+              onClick={() => window.open('https://github.com/kartik-ram07', '_blank')}
+            >
+              <Github className="h-5 w-5" />
+            </Button>
+          </div>
         </div>
       </div>
 

@@ -69,9 +69,9 @@ export default function Projects() {
       title: "Competition Robot Frame",
       description: "Lightweight aluminum chassis design for robotics competition",
       fullDescription: "Designed and analyzed a lightweight yet robust aluminum chassis for a competitive robotics application, balancing weight reduction with structural integrity requirements.",
-      image: "/k_design2.jpg",
+      image: "/rr.png",
       category: "mechanical",
-      aspect: "square",
+      aspect: "landscape",
       technologies: ["SolidWorks", "FEA Analysis", "Aluminum Fabrication", "Welding Design"],
       challenges: ["Weight optimization", "Impact resistance", "Manufacturing complexity"],
       outcomes: ["40% weight reduction", "Competition requirements met", "Successful field testing"]
@@ -148,6 +148,18 @@ export default function Projects() {
       challenges: ["Matching mentors with mentees", "Program scalability", "Progress measurement"],
       outcomes: ["50+ students mentored", "90% program completion rate", "Leadership skills improved"]
     },
+    {
+      id: "mentorship-program-thingy",
+      title: "Silicon Valley Robot",
+      description: "Robot designed over three months for a competition in the San Franscisco Bay Area.",
+      fullDescription: "Developed and implemented a comprehensive mentorship program for aspiring engineers, focusing on both technical skills development and leadership capabilities.",
+      image: "/IMG_4007.JPEG",
+      category: "community",
+      aspect: "landscape",
+      technologies: ["Leadership Development", "Technical Mentoring", "Program Management", "Skills Assessment"],
+      challenges: ["Matching mentors with mentees", "Program scalability", "Progress measurement"],
+      outcomes: ["50+ students mentored", "90% program completion rate", "Leadership skills improved"]
+    },
   ];
 
   // Preload all images on component mount
@@ -192,7 +204,8 @@ export default function Projects() {
         </div>
 
         {/* VSCO-style Masonry Grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+        <div className="flex justify-center">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4 max-w-5xl">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -247,6 +260,7 @@ export default function Projects() {
               </div>
             </motion.div>
           ))}
+          </div>
         </div>
 
       </div>
