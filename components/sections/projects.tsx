@@ -29,106 +29,106 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
-      id: "prototype-build",
-      title: "3D Printed Prototype",
-      description: "From concept to reality - mechanical housing prototype iteration",
-      fullDescription: "Developed a functional prototype for a mechanical housing component using 3D printing technology. This project demonstrated rapid prototyping capabilities and iterative design improvements.",
+      id: "Girl Powered Robotics Workshop",
+      title: "Girl Powered Robotics Workshop",
+      description: "Co-lead annual robotics workshop alongside UCalgary and Google.",
+      fullDescription: "Co-lead annual robotics workshop alongside UCalgary and Google to provide opportunities for girls to explore STEM in an accessible way.",
       image: "/kartikpresent.png",
       category: "community",
       aspect: "landscape",
-      technologies: ["Fusion 360", "3D Printing", "PLA/ABS", "Post-processing"],
+      technologies: ["Talking"],
       challenges: ["Print orientation optimization", "Support structure design", "Surface finish requirements"],
       outcomes: ["Functional prototype achieved", "3 design iterations completed", "Ready for production scaling"]
     },
     {
-      id: "thermal-analysis",
-      title: "Heat Transfer Simulation",
-      description: "Thermal analysis results showing temperature distribution patterns",
-      fullDescription: "Conducted comprehensive thermal analysis on a heat exchanger design to optimize heat transfer efficiency and identify potential hotspots that could affect performance.",
+      id: "2025 Calgary Youth Award Finalist",
+      title: "2025 Calgary Youth Award Finalist",
+      description: "Finalist for Calgary wide Penny Hume Volunteer Award through leadership efforts to create opportunities for the community.",
+      fullDescription: "Finalist for Calgary wide Penny Hume Volunteer Award through leadership efforts to create opportunities for the community.",
       image: "/kartikfam.jpg",
       category: "community",
       aspect: "landscape",
-      technologies: ["ANSYS Fluent", "MATLAB", "Thermal Modeling", "CFD Analysis"],
+      technologies: ["Talking"],
       challenges: ["Complex boundary conditions", "Mesh optimization", "Convergence issues"],
       outcomes: ["20% efficiency improvement", "Hotspot elimination", "Design validation completed"]
     },
     {
-      id: "technical-drawing",
-      title: "Engineering Drawings",
-      description: "Detailed technical drawings with GD&T specifications",
-      fullDescription: "Created comprehensive technical drawings with proper GD&T (Geometric Dimensioning and Tolerancing) specifications for manufacturing. Focused on clear communication of design intent.",
+      id: "2024 World Championships Robot",
+      title: "2024 World Championships Robot",
+      description: "Finished top 16 within our division at VEX Robotics World Championships hosted in Dallas Texas, finishing the year in the top 1.7%.",
+      fullDescription: "Finished top 16 within our division at VEX Robotics World Championships hosted in Dallas Texas, finishing the year in the top 1.7%.",
       image: "/k_mech3.png",
-      category: "design",
+      category: "mechanical",
       aspect: "landscape",
-      technologies: ["AutoCAD", "GD&T", "ASME Standards", "Technical Documentation"],
+      technologies: ["AutoCAD", "Inventor Pro"],
       challenges: ["Tolerance stack-up analysis", "Manufacturing constraints", "Drawing clarity"],
       outcomes: ["Zero manufacturing queries", "Improved production efficiency", "Cost-effective tolerancing"]
     },
     {
-      id: "robotics-chassis",
-      title: "Competition Robot Frame",
-      description: "Lightweight aluminum chassis design for robotics competition",
-      fullDescription: "Designed and analyzed a lightweight yet robust aluminum chassis for a competitive robotics application, balancing weight reduction with structural integrity requirements.",
+      id: "robot-rodeo",
+      title: "Robot Rodeo Champions",
+      description: "Won $3500.",
+      fullDescription: "Won $3500.",
       image: "/rr.png",
       category: "mechanical",
       aspect: "landscape",
-      technologies: ["SolidWorks", "FEA Analysis", "Aluminum Fabrication", "Welding Design"],
+      technologies: ["Winning"],
       challenges: ["Weight optimization", "Impact resistance", "Manufacturing complexity"],
       outcomes: ["40% weight reduction", "Competition requirements met", "Successful field testing"]
     },
     {
-      id: "cad-model-showcase",
-      title: "Art 1",
-      description: "CAD modeling of complex gear mechanisms with stress analysis visualization",
+      id: "Alberta Masterpiece Art Piece",
+      title: "Alberta Masterpiece Art Piece",
+      description: "Created art piece to honor Alberta’s rich history through a more light tone, later gifted to Alberta regional MLA for his retirement.",
       fullDescription: "This project involved creating a detailed CAD model of a precision gear assembly for a mechanical transmission system. The focus was on understanding gear ratios, load distribution, and material stress points under various operating conditions.",
       image: "/battleofab2.jpg",
-      category: "mechanical",
+      category: "design",
       aspect: "square",
-      technologies: ["SolidWorks", "ANSYS", "GD&T", "Material Selection"],
+      technologies: ["Painting"],
       challenges: ["Complex geometry modeling", "Stress concentration analysis", "Manufacturing feasibility"],
       outcomes: ["15% weight reduction", "Improved stress distribution", "Manufacturing cost reduction"]
     },
     {
-      id: "material-testing",
-      title: "Composite Material Tests",
-      description: "Experimental setup for testing carbon fiber composite properties",
-      fullDescription: "Designed and executed experimental procedures to characterize the mechanical properties of carbon fiber composites for aerospace applications.",
+      id: "2023 Canadian National VEX Robotics Champions",
+      title: "2023 Canadian National VEX Robotics Champions",
+      description: "Champions of Canadian international tournament, Mecha Mayhem, defeating top teams from across all of North America.",
+      fullDescription: "Champions of Canadian international tournament, Mecha Mayhem, defeating top teams from across all of North America.",
       image: "/replacement210Z.jpg",
-      category: "community",
+      category: "mechanical",
       aspect: "landscape",
-      technologies: ["LabVIEW", "Instron Testing", "Data Analysis", "Statistical Methods"],
+      technologies: ["AutoCAD"],
       challenges: ["Sample preparation", "Test standardization", "Data interpretation"],
       outcomes: ["Material properties database", "Testing protocol established", "Research publication submitted"]
     },
     {
-      id: "cnc-machining",
-      title: "CNC Machined Parts",
-      description: "Precision machined components with tight tolerances",
-      fullDescription: "Programmed and machined precision components with tight tolerances using CNC machining centers, focusing on surface finish and dimensional accuracy.",
+      id: "2023 Alberta Provincial Finalists",
+      title: "2023 Alberta Provincial Finalists",
+      description: "Placed 2nd in Alberta in our first year of robotics, competing as a middle school team against senior high school teams.",
+      fullDescription: "Placed 2nd in Alberta in our first year of robotics, competing as a middle school team against senior high school teams.",
       image: "/k_mech5.png",
-      category: "community",
+      category: "mechanical",
       aspect: "square",
-      technologies: ["G-code Programming", "CNC Machining", "Quality Control", "Metrology"],
+      technologies: ["CNC Machining", "Quality Control", "AutoCAD"],
       challenges: ["Tolerance achievement", "Surface finish optimization", "Tool wear management"],
       outcomes: ["±0.001\" tolerance achieved", "Excellent surface finish", "Zero defect production"]
     },
     {
-      id: "design-iteration",
-      title: "Design Evolution",
-      description: "Multiple iterations showing design optimization process",
-      fullDescription: "Documented the iterative design process for a mechanical component, showing how design thinking and user feedback led to significant improvements.",
+      id: "2024 Provincial Absolute Champions",
+      title: "2024 Provincial Absolute Champions",
+      description: "2024 Alberta Provincial Champions, Skills Challenge Champions and Design Excellence Champions.",
+      fullDescription: "2024 Alberta Provincial Champions, Skills Challenge Champions and Design Excellence Champions.",
       image: "/k_community1.png",
-      category: "community",
+      category: "mechanical",
       aspect: "landscape",
       technologies: ["Design Thinking", "Prototyping", "User Testing", "CAD Modeling"],
       challenges: ["User requirement interpretation", "Design constraint balance", "Iteration management"],
       outcomes: ["User satisfaction improved", "Manufacturing cost reduced", "Design process documented"]
     },
     {
-      id: "community-outreach-1",
-      title: "Community Outreach Program",
-      description: "Educational robotics workshops for underrepresented communities",
-      fullDescription: "Organized and led educational robotics workshops targeting underrepresented communities, focusing on making STEM accessible to all students regardless of their background.",
+      id: "robotics-summer-camp-leader-2",
+      title: "Robotics Summer Camp Leader",
+      description: "Taught summer camps for 150+ kids from grades 2 - 12, introducing them to basics of the design process, coding and hands on engineering.",
+      fullDescription: "Taught summer camps for 150+ kids from grades 2 - 12, introducing them to basics of the design process, coding and hands on engineering.",
       image: "/k_community2.png",
       category: "community",
       aspect: "landscape",
@@ -138,25 +138,25 @@ export default function Projects() {
     },
     {
       id: "mentorship-program",
-      title: "Student Mentorship Initiative",
-      description: "Mentoring young engineers in technical and leadership skills",
-      fullDescription: "Developed and implemented a comprehensive mentorship program for aspiring engineers, focusing on both technical skills development and leadership capabilities.",
+      title: "Calgary Stampede Build a Bot Lead",
+      description: "Led a robotics booth at the Calgary Stampede.",
+      fullDescription: "Led a robotics booth at the Calgary Stampede.",
       image: "/k_community3.jpg",
       category: "community",
       aspect: "landscape",
-      technologies: ["Leadership Development", "Technical Mentoring", "Program Management", "Skills Assessment"],
+      technologies: ["Event Organization"],
       challenges: ["Matching mentors with mentees", "Program scalability", "Progress measurement"],
       outcomes: ["50+ students mentored", "90% program completion rate", "Leadership skills improved"]
     },
     {
-      id: "mentorship-program-thingy",
+      id: "Silicon Valley Robot",
       title: "Silicon Valley Robot",
       description: "Robot designed over three months for a competition in the San Franscisco Bay Area.",
-      fullDescription: "Developed and implemented a comprehensive mentorship program for aspiring engineers, focusing on both technical skills development and leadership capabilities.",
+      fullDescription: "Robot designed over three months for a competition in the San Franscisco Bay Area.",
       image: "/IMG_4007.JPEG",
-      category: "community",
+      category: "mechanical",
       aspect: "landscape",
-      technologies: ["Leadership Development", "Technical Mentoring", "Program Management", "Skills Assessment"],
+      technologies: ["Inventor Pro", "AutoCAD"],
       challenges: ["Matching mentors with mentees", "Program scalability", "Progress measurement"],
       outcomes: ["50+ students mentored", "90% program completion rate", "Leadership skills improved"]
     },
@@ -329,7 +329,6 @@ export default function Projects() {
                 </p>
               </div>
 
-              {/* Technologies */}
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white mb-3">Technologies Used</h3>
                 <div className="flex flex-wrap gap-2">
@@ -345,8 +344,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Challenges */}
-              <div className="mb-6">
+              {/* <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white mb-3">Key Challenges</h3>
                 <ul className="space-y-2">
                   {selectedProject.challenges.map((challenge, index) => (
@@ -358,7 +356,6 @@ export default function Projects() {
                 </ul>
               </div>
 
-              {/* Outcomes */}
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white mb-3">Outcomes & Results</h3>
                 <ul className="space-y-2">
@@ -369,7 +366,7 @@ export default function Projects() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
 
               {/* Links */}
               {selectedProject.links && (
