@@ -80,7 +80,7 @@ export default function Projects() {
       id: "Alberta Masterpiece Art Piece",
       title: "Alberta Masterpiece Art Piece",
       description: "Created art piece to honor Alberta’s rich history through a more light tone, later gifted to Alberta regional MLA for his retirement.",
-      fullDescription: "This project involved creating a detailed CAD model of a precision gear assembly for a mechanical transmission system. The focus was on understanding gear ratios, load distribution, and material stress points under various operating conditions.",
+      fullDescription: "Created art piece to honor Alberta’s rich history through a more light tone, later gifted to Alberta regional MLA for his retirement.",
       image: "/battleofab2.jpg",
       category: "design",
       aspect: "square",
