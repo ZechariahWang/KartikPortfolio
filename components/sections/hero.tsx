@@ -61,7 +61,7 @@ export default function Hero() {
               size="lg"
               variant="outline"
               className="border-gray-600 text-gray-300 hover:bg-gray-800"
-              onClick={() => { window.location.href = 'https://drive.google.com/file/d/1RYB01jL6YUF5eNr18eLt2bip9FLhkDiH/view?usp=sharing'; }}
+              onClick={() => { window.location.href = 'https://drive.google.com/file/d/1lDULAGNN7jfHaKk5ACNWoF_7zbgYiGaL/view?usp=sharing'; }}
             >
               
               Resume
