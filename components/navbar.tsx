@@ -11,11 +11,10 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   const navItems = useMemo(() => [
-    { id: "hero", label: "Home" },
     { id: "about", label: "About" },
+    { id: "documents", label: "Resume" },
     { id: "experience", label: "Experience" },
-    { id: "projects", label: "Projects" },
-    { id: "documents", label: "Resume" }
+    { id: "projects", label: "Projects" }
   ], []);
 
   const scrollToSection = (sectionId: string) => {

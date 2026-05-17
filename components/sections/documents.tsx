@@ -12,7 +12,7 @@ const DOCS: Record<DocKey, { label: string; file: string; icon: typeof FileText 
 };
 
 export default function Documents() {
-  const [active, setActive] = useState<DocKey>("resume");
+  const [active, setActive] = useState<DocKey>("portfolio");
   const current = DOCS[active];
 
   return (
