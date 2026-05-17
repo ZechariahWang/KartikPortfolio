@@ -57,7 +57,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 px-4 bg-gray-950">
+    <section id="experience" className="py-20 px-4 bg-black">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2
@@ -72,30 +72,22 @@ export default function Experience() {
         </div>
 
         <div className="relative">
-          {/* Timeline Line - Liquid Glass */}
-          <div className="absolute left-[1.125rem] top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400/30 via-purple-400/30 to-transparent backdrop-blur-sm rounded-full shadow-lg shadow-blue-500/20"></div>
+          {/* Timeline Line */}
+          <div className="absolute left-[1.125rem] top-0 bottom-0 w-px bg-[#d4af37]/30"></div>
 
           <div className="space-y-6">
             {workExperiences.map((experience) => (
               <div key={experience.id} className="relative flex items-start gap-6">
-                {/* Timeline Dot - Liquid Glass */}
+                {/* Timeline Dot */}
                 <div className="relative z-10 flex-shrink-0">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-400/40 via-purple-500/40 to-pink-400/40 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center shadow-xl shadow-blue-500/30">
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
-                    <Briefcase className="h-4 w-4 text-white relative z-10" />
+                  <div className="w-10 h-10 bg-[#d4af37] border border-[#d4af37] rounded-full flex items-center justify-center">
+                    <Briefcase className="h-4 w-4 text-black relative z-10" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="flex-1 pb-8">
-                  <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden group">
-                    {/* Glass reflection effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
-
-                    {/* Liquid glass blob effect */}
-                    <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
-                    <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-tr from-pink-400/20 to-cyan-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
-
+                  <div className="relative bg-white/5 border border-[#d4af37]/20 rounded-2xl p-6 hover:bg-white/[0.07] hover:border-[#d4af37]/40 transition-colors duration-200 overflow-hidden group">
                     {/* Content wrapper */}
                     <div className="relative z-10">
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-3 mb-3">
@@ -103,7 +95,7 @@ export default function Experience() {
                         <h3 className="text-lg font-bold text-white mb-1">
                           {experience.title}
                         </h3>
-                        <p className="text-base text-blue-400 font-medium mb-1">
+                        <p className="text-base text-[#d4af37] font-medium mb-1">
                           {experience.organization}
                         </p>
                       </div>
@@ -123,7 +115,7 @@ export default function Experience() {
                     <ul className="space-y-2 text-gray-300">
                       {experience.description.map((item, bulletIndex) => (
                         <li key={bulletIndex} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full mt-2 flex-shrink-0"></div>
                           <span className="leading-snug text-sm">{item}</span>
                         </li>
                       ))}

@@ -34,13 +34,13 @@ export default function About() {
                   sizes="(max-width: 768px) 320px, 384px"
                 />
                 {/* Subtle overlay for better text contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-black/20" />
               </div>
 
               {/* Background Text Box - Positioned right of center, wider */}
               <div className="relative w-80 md:w-[500px] lg:w-[1000px] z-10 md:mt-16 lg:mt-50 mb-20 md:mb-0 order-2 md:order-1">
                 <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 p-4 md:p-2 lg:p-8 shadow-2xl">
-                  <h3 className="text-2xl font-bold text-white mb-4">Background</h3>
+                  <h3 className="text-2xl font-bold text-[#d4af37] mb-4">Background</h3>
                   <div className="space-y-4 text-gray-300 text-base">
                     <p className="leading-relaxed">
                       I&apos;m Kartik, a Systems Design Engineering student at the University of Waterloo with a passion for robotics, hardware design, and mechanical engineering.
@@ -63,7 +63,7 @@ export default function About() {
               {/* Passion & Vision Text Box - Positioned left of center, wider */}
               <div className="relative w-80 md:w-[500px] lg:w-[850px] z-0 md:-mr-12 lg:-mr-16 md:-mt-16 lg:mt-55 mb-40 md:mb-30 order-2 md:order-1">
                 <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 p-4 md:p-6 lg:p-8 shadow-2xl">
-                  <h3 className="text-2xl font-bold text-white mb-6">Currently Working On: Canada&apos;s largest Robotics Tournament</h3>
+                  <h3 className="text-2xl font-bold text-[#d4af37] mb-6">Currently Working On: Canada&apos;s largest Robotics Tournament</h3>
                   <div className="space-y-4 text-gray-300 text-base">
                     <p className="leading-relaxed">
                       As Event Co-Lead for Mecha Mayhem 2025, Canada&apos;s largest high school robotics competition, I led a team of over 160 volunteers in organizing an event that brings together hundreds of participants from across the country.

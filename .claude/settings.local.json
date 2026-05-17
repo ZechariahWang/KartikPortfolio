@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"application_files/Kartik Resume 1B \\(1\\).pdf\" \"public/resume.pdf\")",
+      "Bash(cp \"application_files/Kartik Portfolio 1B\\(smaller\\).2.pdf\" \"public/portfolio.pdf\")"
+    ]
+  }
+}

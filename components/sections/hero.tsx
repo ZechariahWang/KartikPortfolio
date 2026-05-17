@@ -31,18 +31,23 @@ export default function Hero() {
       <div className="relative z-20 max-w-4xl mx-auto">
         <motion.h1
           className="text-5xl md:text-7xl font-bold mb-6"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
         >
-          <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Hi, I&apos;m </span>
-          <span className="bg-gradient-to-r from-[#ff34a1] to-[#00ffc3] bg-clip-text text-transparent">Kartik</span>
+          <span className="text-white">Hi, I&apos;m </span>
+          <span
+            className="text-[#d4af37]"
+            style={{ textShadow: "0 0 30px rgba(212, 175, 55, 0.55), 0 0 30px rgba(212, 175, 55, 0.3)" }}
+          >
+            Kartik
+          </span>
         </motion.h1>
         <motion.h2
           className="text-xl md:text-2xl text-gray-300 mb-8"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.35, delay: 0.08, ease: "easeOut" }}
         >
           Systems Design Engineering @ UWaterloo
         </motion.h2>
@@ -52,7 +57,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-200 transition-colors"
+              className="bg-[#d4af37] text-black hover:bg-[#e8c766] transition-colors"
               onClick={() => scrollToSection("projects")}
             >
               View My Work
@@ -60,10 +65,9 @@ export default function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-gray-600 text-gray-300 hover:bg-gray-800"
-              onClick={() => { window.location.href = 'https://drive.google.com/file/d/1lDULAGNN7jfHaKk5ACNWoF_7zbgYiGaL/view?usp=sharing'; }}
+              className="border-[#d4af37]/50 text-[#d4af37] hover:bg-[#d4af37]/10 hover:text-[#e8c766]"
+              onClick={() => scrollToSection("documents")}
             >
-              
               Resume
             </Button>
           </div>
@@ -72,7 +76,7 @@ export default function Hero() {
           <div className="flex gap-4">
             <Button
               size="icon"
-              className="w-10 h-10 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800"
+              className="w-10 h-10 rounded-full border-[#d4af37]/50 text-[#d4af37] hover:bg-[#d4af37]/10 hover:text-[#e8c766]"
               variant="outline"
               onClick={() => { window.location.href = 'mailto:kramacha@uwaterloo.ca'; }}
             >
@@ -80,7 +84,7 @@ export default function Hero() {
             </Button>
             <Button
               size="icon"
-              className="w-10 h-10 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800"
+              className="w-10 h-10 rounded-full border-[#d4af37]/50 text-[#d4af37] hover:bg-[#d4af37]/10 hover:text-[#e8c766]"
               variant="outline"
               onClick={() => window.open('https://www.linkedin.com/in/kartik-ramachandran-b25aa8290/', '_blank')}
             >
@@ -88,7 +92,7 @@ export default function Hero() {
             </Button>
             <Button
               size="icon"
-              className="w-10 h-10 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800"
+              className="w-10 h-10 rounded-full border-[#d4af37]/50 text-[#d4af37] hover:bg-[#d4af37]/10 hover:text-[#e8c766]"
               variant="outline"
               onClick={() => window.open('https://github.com/kartik-ram07', '_blank')}
             >
@@ -96,15 +100,6 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <button
-          onClick={() => scrollToSection("about")}
-          className="text-gray-400 hover:text-white transition-colors animate-bounce"
-        >
-          <ChevronDown size={32} />
-        </button>
       </div>
     </section>
   );

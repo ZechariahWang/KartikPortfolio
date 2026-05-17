@@ -172,10 +172,10 @@ export default function Projects() {
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'mechanical': return 'bg-blue-500/20 text-blue-300';
-      case 'design': return 'bg-purple-500/20 text-purple-300';
-      case 'community': return 'bg-green-500/20 text-green-300';
-      default: return 'bg-gray-500/20 text-gray-300';
+      case 'mechanical': return 'bg-[#d4af37]/15 text-[#d4af37]';
+      case 'design': return 'bg-[#e8c766]/15 text-[#e8c766]';
+      case 'community': return 'bg-[#f0d98a]/15 text-[#f0d98a]';
+      default: return 'bg-[#d4af37]/15 text-[#d4af37]';
     }
   };
 
@@ -189,7 +189,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 px-4 bg-gray-950">
+    <section id="projects" className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <motion.h2
@@ -222,7 +222,7 @@ export default function Projects() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover object-[center_30%] scale-105 group-hover:scale-110 transition-transform duration-700"
+                    className="object-cover object-[center_30%] scale-105 group-hover:scale-110 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
 
@@ -269,24 +269,24 @@ export default function Projects() {
       <AnimatePresence>
         {selectedProject && (
           <motion.div
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.1 }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
-              className="bg-gray-900 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide"
-              initial={{ y: "100%", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: "100%", opacity: 0 }}
-              transition={{ type: "spring", stiffness: 400, damping: 25, duration: 2 }}
+              className="bg-[#0a0a0a] border border-[#d4af37]/25 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide"
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.96 }}
+              transition={{ duration: 0.18, ease: "easeOut" }}
               onClick={(e) => e.stopPropagation()}
             >
             {/* Modal Header */}
             <div className="relative">
-              <div className="relative aspect-[16/9] overflow-hidden rounded-t-3xl">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-t-2xl">
                 <Image
                   src={selectedProject.image}
                   alt={selectedProject.title}
@@ -294,7 +294,7 @@ export default function Projects() {
                   className="object-cover object-[center_10%]"
                   sizes="(max-width: 1200px) 100vw, 1200px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute inset-0 bg-black/30" />
               </div>
               <button
                 onClick={() => setSelectedProject(null)}
@@ -336,7 +336,7 @@ export default function Projects() {
                     <Badge
                       key={tech}
                       variant="outline"
-                      className="border-blue-500/30 bg-blue-500/10 text-blue-300"
+                      className="border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
                     >
                       {tech}
                     </Badge>
@@ -370,13 +370,13 @@ export default function Projects() {
 
               {/* Links */}
               {selectedProject.links && (
-                <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-800">
+                <div className="flex flex-wrap gap-3 pt-4 border-t border-[#d4af37]/20">
                   {selectedProject.links.github && (
                     <a
                       href={selectedProject.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-white text-sm transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-[#d4af37]/30 hover:bg-[#d4af37]/10 rounded-lg text-[#d4af37] text-sm transition-colors"
                     >
                       <Github className="w-4 h-4" />
                       View Code
@@ -387,7 +387,7 @@ export default function Projects() {
                       href={selectedProject.links.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white text-sm transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37] hover:bg-[#e8c766] rounded-lg text-black text-sm font-semibold transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
@@ -398,7 +398,7 @@ export default function Projects() {
                       href={selectedProject.links.documentation}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white text-sm transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-[#d4af37]/30 hover:bg-[#d4af37]/10 rounded-lg text-[#d4af37] text-sm transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Documentation
