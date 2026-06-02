@@ -16,6 +16,19 @@ interface WorkExperience {
 export default function Experience() {
   const workExperiences: WorkExperience[] = [
     {
+      id: "power-house",
+      title: "Data Centre Mechanical Design Intern",
+      organization: "PowerHouse Data Centre Group",
+      location: "Calgary, AB",
+      period: "Jan 2026 – May 2026",
+      description: [
+        "Utilized AutoCAD to develop site expansion drawings for a TELUS data centre, designing thermal and computing infrastructure, and produced Electrical drawings for Uninterruptible Power Supply (UPS) systems, rated 300 VA to 5,000.",
+        "Engineered and specified Vertiv/Liebert thermal cooling solutions for clients across a wide cooling load range (5kW–265kW), supporting environments where rack densities routinely exceed 100 kW in high-performance facilities.",
+        "Created engraved lamacoid identification from electrical drawings for power cabinets at a Satellite facility in High River, AB - ensuring compliance with Canadian Electrical Code (CEC) requirements for clear identification in emergencies.",
+      ],
+      technologies: []
+    },
+    {
       id: "west-mech",
       title: "Club Executive",
       organization: "Western Mechatronics",
@@ -29,18 +42,18 @@ export default function Experience() {
       ],
       technologies: []
     },
-    {
-      id: "next",
-      title: "Robotics Teacher",
-      organization: "NEXT Robotics",
-      location: "Calgary, AB",
-      period: "June 2021 – April 2024",
-      description: [
-        "Designed and built multiple STEM based curriculums taught to students ranging from Grades 2 – 12, focusing on engineering principles and coding basics",
-        "Facilitated full-time summer camps and year-round classes, allowing students to explore robotics and prepare for competitive teams, impacting 350+ students in total",
-      ],
-      technologies: []
-    },
+    // {
+    //   id: "next",
+    //   title: "Robotics Teacher",
+    //   organization: "NEXT Robotics",
+    //   location: "Calgary, AB",
+    //   period: "June 2021 – April 2024",
+    //   description: [
+    //     "Designed and built multiple STEM based curriculums taught to students ranging from Grades 2 – 12, focusing on engineering principles and coding basics",
+    //     "Facilitated full-time summer camps and year-round classes, allowing students to explore robotics and prepare for competitive teams, impacting 350+ students in total",
+    //   ],
+    //   technologies: []
+    // },
     {
       id: "gp",
       title: "Event Co-Lead",
@@ -73,15 +86,17 @@ export default function Experience() {
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-[1.125rem] top-0 bottom-0 w-px bg-[#d4af37]/30"></div>
+          <div className="absolute left-[1.1875rem] top-2 bottom-2 w-0.5 bg-gradient-to-b from-transparent via-[#d4af37]/50 to-transparent"></div>
 
           <div className="space-y-6">
             {workExperiences.map((experience) => (
               <div key={experience.id} className="relative flex items-start gap-6">
                 {/* Timeline Dot */}
                 <div className="relative z-10 flex-shrink-0">
-                  <div className="w-10 h-10 bg-[#d4af37] border border-[#d4af37] rounded-full flex items-center justify-center">
-                    <Briefcase className="h-4 w-4 text-black relative z-10" />
+                  {/* Ambient glow */}
+                  <span className="absolute inset-0 rounded-full bg-[#d4af37]/40 blur-md"></span>
+                  <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-[#f0d479] to-[#c9a227] ring-4 ring-[#d4af37]/15 shadow-[0_0_18px_rgba(212,175,55,0.45)] flex items-center justify-center transition-transform duration-200 hover:scale-110">
+                    <Briefcase className="h-4 w-4 text-black" />
                   </div>
                 </div>
 

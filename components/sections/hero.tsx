@@ -57,13 +57,6 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-[#d4af37] text-black hover:bg-[#e8c766] transition-colors"
-              onClick={() => scrollToSection("projects")}
-            >
-              View My Work
-            </Button>
-            <Button
-              size="lg"
               variant="outline"
               className="border-[#d4af37]/50 text-[#d4af37] hover:bg-[#d4af37]/10 hover:text-[#e8c766]"
               onClick={() => scrollToSection("documents")}
